@@ -16,7 +16,7 @@ import {
   useColorScheme,
   View,
   Pressable,
-  Image
+  Image,
 } from 'react-native';
 
 import {
@@ -28,32 +28,26 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import loginImg from './src/assets/Images/kakao.png';
 
-
-
 const App = () => {
-
-  const onclick =()=>{
+  const onclick = () => {
     //TODO: 버튼 클릭 이벤트
-  }
+  };
 
   return (
     <SafeAreaView>
       <Pressable onClick={onclick}>
-        <Image source={loginImg} style={styles.loginbutton}/>
+        <Image source={loginImg} style={styles.loginbutton} />
       </Pressable>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  loginbutton:{
-   
-    marginTop:200,
+  loginbutton: {
+    marginTop: 200,
     justifyContent: 'center',
-    alignItems:'center',
-
+    alignItems: 'center',
   },
- 
 });
 
 export default App;
