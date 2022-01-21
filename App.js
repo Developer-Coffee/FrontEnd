@@ -36,14 +36,14 @@ const App = () => {
   return (
     <SafeAreaView>
       <Pressable onClick={onclick}>
-        <Image source={loginImg} style={styles.loginbutton} />
+        <Image source={loginImg} style={styles.loginButton} />
       </Pressable>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  loginbutton: {
+  loginButton: {
     marginTop: 200,
     justifyContent: 'center',
     alignItems: 'center',
