@@ -1,0 +1,20 @@
+{
+    "board" : [
+        {"id":1, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":2, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":3, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":4, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":5, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":6, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":7, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":8, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8"},
+        {"id":9, "place":"N1", "order_place":"투썸플레이스",  "member":"6", "order":"8", "create_at":"0"}
+    ],
+    "user" :[
+        {"id": 1, "name": "짱구"},
+        {"id": 2, "name": "짱아"}
+    ],
+    "order" :[
+        
+    ]
+}
