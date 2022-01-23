@@ -7,26 +7,9 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Pressable,
-  Image,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import loginImg from './src/assets/Images/kakao.png';
+import Login from "./src/Screens/login";
 
 const App = () => {
   const onclick = () => {
@@ -34,19 +17,18 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView>
-      <Pressable onClick={onclick}>
-        <Image source={loginImg} style={styles.loginButton} />
-      </Pressable>
+    <SafeAreaView style={styles.safeAreaView}>
+      <Login/>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  loginButton: {
-    marginTop: 200,
-    justifyContent: 'center',
+  safeAreaView: {
+    height: '100%',
+    width: '100%',
     alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
