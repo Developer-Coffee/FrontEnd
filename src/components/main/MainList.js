@@ -5,9 +5,6 @@ import {useNavigation} from '@react-navigation/native';
 import MainListItem from './MainListItem';
 import dummy from '../../db/data.json';
 
-
-
-
 const MainList = ({search}) =>{
     const navigation = useNavigation();
     // const [orderList, setOrderList] = useState([]);

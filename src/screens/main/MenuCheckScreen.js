@@ -1,28 +1,34 @@
-import React, {useState, useCallback, useEffect} from 'react';
-import { View, Pressable, StyleSheet, Text } from 'react-native';
-import OrderList from '../../components/order/OrderList';
+import React, { useEffect, useState, useCallback } from 'react';
+import {View, Text, Pressable, Alert} from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
+import {useRoute} from '@react-navigation/native';
+import _ from 'lodash';
 import TabHeader from '../../components/TabHeader';
-import OrderButton from '../../components/order/OrderButton';
+import MenuList from '../../components/menu/MenuList';
+import MenuListItem from '../../components/menu/MenuListItem';
+import { useNavigation } from '@react-navigation/native';
 
-const OrderListScreen =({navigation})=>{
 
-    const onpress = useCallback(() => {
-        navigation.navigate('MeunChoiceScreen', {navigation});
+const MenuCheckScreen = ({navigation}) => {
+
+    const onpress = useCallback(()=>{
+        navigation.navigate('MainScreen');
     }, [navigation]);
 
-    return(
-        <View>
-            <TabHeader title = "N1 투썸플레이스"/>
-            <OrderList/>
 
+    return (
+        <>
+            <TabHeader/>
+            <Text>투썸플레이스</Text>
+            
             <View style={{position:'absolute',bottom:20, alignSelf:'flex-end', width:'100%'}}>
                 <Pressable onPress={onpress}>
                     <View style={styles.nextButton}>
-                        <Text style={{fontFamily:'GodoM', alignSelf:'center'}}>나도 주문하기</Text>
+                        <Text style={{fontFamily:'GodoM', alignSelf:'center'}}>결제하기</Text>
                     </View>
                 </Pressable>
             </View>
-        </View>
+        </>
     );
 }
 
@@ -52,4 +58,4 @@ const styles = StyleSheet.create({
 
   });
 
-export default OrderListScreen;
+export default MenuCheckScreen;

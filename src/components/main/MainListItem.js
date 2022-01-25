@@ -7,7 +7,6 @@ const MainListItem =({item})=>{
 
     const onPress = useCallback((item)=>{
         navigation.navigate('OrderListScreen', {item});
-
     }, [navigation, item]);
 
     return(
@@ -23,22 +22,18 @@ const MainListItem =({item})=>{
 
                     <Text style={{fontSize:24}}>5000원</Text>
                     <View style={{flexDirection:'row', justifyContent:'center'}}>
-
                         <View style={styles.innerContainer}>
                             <Text style={styles.smalltext}>인원</Text>
                             <Text style={styles.smalltext}>6</Text>
                         </View>
-
                         <View style={styles.innerContainer}>
                             <Text style={styles.smalltext}>주문</Text>
                             <Text style={styles.smalltext}>8</Text>
                         </View>
-
                         <View style={styles.innerContainer}>
                             <Text style={styles.smalltext}>배달비</Text>
                             <Text style={styles.smalltext}>500원</Text>
                         </View>
-
                     </View>
                 </View>
             </View>
