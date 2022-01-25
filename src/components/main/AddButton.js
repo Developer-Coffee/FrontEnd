@@ -14,7 +14,7 @@ const AddButton = ({}) => {
 
 
     const onPress = useCallback(() => {
-        navigation.navigate('AddBoardScreen', {navigation});
+        navigation.navigate('DeliveryPlaceScreen', {navigation});
     }, [navigation]);
 
     /*return (

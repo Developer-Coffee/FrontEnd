@@ -24,9 +24,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-between',
+        height: '10%'
     },
     backIcon:{
         alignItem:'center',
+        height:'6%',
         justifyContent: 'flex-start',
     },
     searchIcon:{
