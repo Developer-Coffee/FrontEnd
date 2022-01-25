@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useMemo } from 'react';
 import { View, Text, TextInput, Pressable } from 'react-native';
 import TabHeader from '../../components/TabHeader';
-import BottomSheet, {BottomSheetFooter} from '@gorhom/bottom-sheet';
+
 import {StyleSheet} from 'react-native';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Search from '../../components/main/search';
@@ -15,15 +15,15 @@ const AddBoardScreen =({navigation})=>{
     //const bottomSheetRef = useRef<BottomSheet>(null);
 
     //ref
-    const bottomSheetRef = useRef(null);
+    //const bottomSheetRef = useRef(null);
 
     //variables
-    const snapPoints = useMemo(() => ['90%', '100%'], []);
+   // const snapPoints = useMemo(() => ['90%', '100%'], []);
 
     //callbacks
-    const handleSheetChanges = useCallback((index) => {
-        console.log('handleSheetChanges', index);
-      }, []);
+    // const handleSheetChanges = useCallback((index) => {
+    //     console.log('handleSheetChanges', index);
+    //   }, []);
     
       const onpress = useCallback(()=>{
         navigation.navigate('MenuChoiceScreen');
