@@ -41,3 +41,6 @@ allprojects {
         maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
     }
 }
+project.ext.react = [
+  enableHermes: true  // <- here | clean and rebuild if changing
+]
