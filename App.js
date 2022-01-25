@@ -10,6 +10,7 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 import Login from "./src/Screens/login";
+import SocketTest from "./src/Screens/socketTest";
 
 const App = () => {
   const onclick = () => {
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <Login/>
+      <SocketTest/>
     </SafeAreaView>
   );
 };
