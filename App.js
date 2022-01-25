@@ -14,7 +14,7 @@ const {
 
 const Stack = createStackNavigator();
 
-const App: () => React$Node = () => {
+const App = () => {
   const [appUser, setAppUser ] = useState(" "); // 유저 통과
   const MainTabComp = useCallback((props) => { return (<MainScreen {...props} setAppUser={setAppUser} />) },[setAppUser]);
   const LoginComp = useCallback((props) => { return (<MainScreen {...props} setAppUser={setAppUser} />) },[setAppUser]);

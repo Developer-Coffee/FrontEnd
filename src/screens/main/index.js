@@ -4,6 +4,10 @@ import DeliveringScreen from './DeliveringScreen';
 import OrderEndScreen from './OrderEndScreen';
 import PaymentScreen from './PaymentScreen';
 import DeliveryPlaceScreen from './DeliveryPlaceScreen';
+import AddBoardScreen from './AddBoardScreen';
+import MenuChoiceScreen from './MenuChoiceScreen';
+import MenuCheckScreen from './MenuCheckScreen';
+
 
 export default {
     MainScreen,
@@ -11,5 +15,8 @@ export default {
     DeliveringScreen,
     OrderEndScreen,
     PaymentScreen,
-    DeliveryPlaceScreen
+    DeliveryPlaceScreen,
+    AddBoardScreen,
+    MenuChoiceScreen,
+    MenuCheckScreen
 }

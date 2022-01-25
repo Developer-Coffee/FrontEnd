@@ -13,7 +13,6 @@ import MainList from '../../components/main/MainList';
 import AddButton from '../../components/main/AddButton';
 import Search from '../../components/main/search';
 
-
 const MainScreen = ({navigation}) => {
     const route = useRoute();
     const [searchText, setSearchText] = useState('');
