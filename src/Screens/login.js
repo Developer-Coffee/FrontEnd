@@ -5,6 +5,7 @@ import loginImg from "../assets/Images/kakao.png";
 import KakaoSDK from "@actbase/react-kakaosdk";
 import CheckBox from "@react-native-community/checkbox";
 import axios from "axios";
+import mainLogo from '../assets/Images/mainLogo.png'
 
 const Login = ({setAppUser}) => {
 
@@ -41,7 +42,6 @@ const Login = ({setAppUser}) => {
   return (
       <>
         <TouchableOpacity onPress={kakaoLogin} style={styles.loginButtonHolder}>
-          
           <Image source={loginImg} style={styles.loginButton} />
         </TouchableOpacity>
       </>

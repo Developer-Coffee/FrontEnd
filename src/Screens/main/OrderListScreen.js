@@ -6,13 +6,14 @@ import OrderButton from '../../components/order/OrderButton';
 
 const OrderListScreen =({route, navigation})=>{
     let boardId = route.params.item._id
+    let title = route.params.item.shop.name;
     const onpress = useCallback(() => {
         navigation.navigate('MenuChoiceScreen', {navigation});
     }, [navigation]);
 
     return(
         <View style = {{flexDirection:'column', height:'100%'}}>
-            <TabHeader title = "N1 투썸플레이스"/>
+            <TabHeader title = {title}/>
             <OrderList boardId = {boardId}/>
 
             <View style={{position:'absolute',bottom:"5%", alignSelf:'flex-end', width:'100%'}}>
