@@ -7,7 +7,7 @@ import DeliveryPlaceScreen from './DeliveryPlaceScreen';
 import AddBoardScreen from './AddBoardScreen';
 import MenuChoiceScreen from './MenuChoiceScreen';
 import MenuCheckScreen from './MenuCheckScreen';
-
+import OrderEndListScreen from './OrderEndListScreen';
 
 export default {
     MainScreen,
@@ -18,5 +18,6 @@ export default {
     DeliveryPlaceScreen,
     AddBoardScreen,
     MenuChoiceScreen,
-    MenuCheckScreen
+    MenuCheckScreen,
+    OrderEndListScreen,
 }

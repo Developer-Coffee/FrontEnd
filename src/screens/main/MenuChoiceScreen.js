@@ -9,7 +9,13 @@ import MenuListItem from '../../components/menu/MenuListItem';
 import { useNavigation } from '@react-navigation/native';
 
 
-const MenuChoiceScreen = ({navigation}) => {
+const MenuChoiceScreen = ({route, navigation}) => {
+
+    console.log('####')
+    console.log(route.params.place)
+    console.log(route.params.cafe)
+    console.log(route.params.boardId)
+    console.log('####')
 
     const onpress = useCallback(()=>{
         navigation.navigate('MenuCheckScreen');

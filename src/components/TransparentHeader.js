@@ -6,13 +6,13 @@ import _ from 'lodash';
 
 
 export default function TransparentHeader() {
-    const navigation = useNavigation();
+    // const navigation = useNavigation();
     
     return (
-        <View style={styles.row}>
-            <Pressable style={styles.closeButton} onPress={() => navigation.goBack()}>
-                <Ionicons name="chevron-back-outline" size={20} color="#59B5FF" />
-            </Pressable>
+        <View>
+            {/* <Pressable style={styles.closeButton} onPress={() => navigation.goBack()}> */}
+                <Ionicons style = {styles.row} name="chevron-back-outline" size={28} color="#59B5FF" />
+            {/* </Pressable> */}
         </View>
         
     )
@@ -20,13 +20,14 @@ export default function TransparentHeader() {
 
 const styles = StyleSheet.create({
     closeButton: {
-        padding: 12,
-        alignItems: 'center',
-        justifyContent: 'center',
+        paddingLeft: 12,
+        // alignItems: 'center',
+        // justifyContent: 'center',
     },
     row: {
-        flexDirection: 'row',  
-        justifyContent: 'space-between',
-        margin: 12,
+        // flexDirection: 'row',  
+        // justifyContent: 'space-between',
+        marginLeft: 0,
+        marginTop: 17,
     },
 })

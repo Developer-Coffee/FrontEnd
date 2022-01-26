@@ -1,21 +1,16 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ProfileList from './ProfileList';
+import axios from 'axios';
 
 const OrderListItem =({item})=>{
 
     return (
         <>
             <View style={styles.container}>
-                    <Text style={styles.text}>아이스아메리카노</Text>
-                    <Text style={styles.text}>6개</Text>
+                    <Text style={styles.text}>{item.name}</Text>
+                    <Text style={styles.text}>{item.num + "개"}</Text>
             </View>
-
-            <View style={styles.container}>
-                    <Text style={styles.text}>아메리카노</Text>
-                    <Text style={styles.text}>3개</Text>
-            </View>
-
         </>
     );
 

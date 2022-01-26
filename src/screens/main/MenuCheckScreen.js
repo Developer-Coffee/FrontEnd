@@ -12,7 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 const MenuCheckScreen = ({navigation}) => {
 
     const onpress = useCallback(()=>{
-        navigation.navigate('MainScreen');
+        navigation.navigate('PaymentScreen');
     }, [navigation]);
 
 

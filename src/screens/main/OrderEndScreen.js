@@ -16,12 +16,14 @@ import OrderEnd from '../../components/main/OrderEnd';
 import TabHeader from '../../components/TabHeader';
 
 
-const OrderEndScreen = () => {
+const OrderEndScreen = ({route, navigation}) => {
 
+    // console.log(route.params.pin);
+    let pin = route.params.pin;
     return (
         <View>
             <TabHeader/>
-            <OrderEnd/>
+            <OrderEnd pin = {pin}/>
         </View>
     );
 }
