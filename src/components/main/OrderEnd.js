@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { StyleSheet, FlatList, Text, View, Image } from 'react-native';
+import { StyleSheet, FlatList, Text, View, Image, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import {useNavigation} from '@react-navigation/native';
 import MainListItem from './MainListItem';
@@ -8,7 +8,15 @@ import cafe from '../../assets/Images/twosome_kaist.jpg'
 
 
 
-const OrderEnd = () =>{
+const OrderEnd = ({pin}) =>{
+    const navigation = useNavigation();
+
+    const onpress = useCallback(()=>{
+        navigation.navigate('DeliveryPlaceScreen');
+    }, [navigation]);
+    console.log(pin)
+
+
     const time = "15" + "분";
     const cost = "5000" + "원";
     return(
@@ -26,16 +34,20 @@ const OrderEnd = () =>{
                         <Text style = {styles.smallText}>배달비</Text>
                         <Text style = {styles.bigText}>{cost}</Text>
                     </View>
-                    <View style = {{alignItems: 'center'}}>
-                        <Text style = {styles.Button}>내가 배달가기
-                        </Text>
-                    </View>
+                    <Pressable onPress={onpress}>
+                        <View style = {{alignItems: 'center'}}>
+                            <Text style = {styles.Button}>내가 배달가기
+                            </Text>
+                        </View>
+                    </Pressable>
                 </View>
             </View>
-            <View style={styles.container2}>
-                <Text style = {styles.order}>주문내역</Text>
+            {/* <View style={styles.container2}>
+                <Pressable onPress={onpress} style = {styles.order}>
+                    <Text style = {styles.text}>주문내역</Text>
+                </Pressable>
                 <Text style = {styles.delivery}>배달</Text>
-            </View>
+            </View> */}
         </View>
     );
 }
@@ -50,10 +62,10 @@ const styles = StyleSheet.create({
         // borderWidth:0,
         marginLeft:"7%",
         marginRight:"7%",
-        marginTop: "4%",
+        marginTop: "10%",
         marginBottom: "1%",
         backgroundColor:'#fff',
-        height: "78%",
+        height: "80%",
         // borderColor:'#ababab',
         // borderWidth: 0.7
     },
@@ -84,18 +96,18 @@ const styles = StyleSheet.create({
     Button:{
         fontSize: 20,
         fontWeight: 'bold',
-        width: "88%",
-        height: "35%",
+        width: "50%",
+        height: "43%",
         borderRadius: 10,
         textAlign: 'center',
         textAlignVertical: 'center',
-        marginTop:"3%",
+        marginTop:"14%",
         marginBottom: "2%",
         backgroundColor: "#ffd608"
     },
     smallText:{
         fontFamily: 'GodoM',
-        marginTop:20,
+        marginTop:30,
         marginLeft:40,
         marginRight:3,
         color:'#ffffff',
@@ -110,15 +122,29 @@ const styles = StyleSheet.create({
         fontSize:30,
         fontWeight:'bold',
     },
+    // order:{
+    //     textAlignVertical:'center',
+    //     textAlign: 'center',
+    //     fontSize: 25,
+    //     width: "50%",
+    //     fontWeight: 'bold',
+    //     borderTopLeftRadius: 15,
+    //     borderBottomLeftRadius:15
+    // },
     order:{
-        textAlignVertical:'center',
+        width: "50%",
+        borderTopLeftRadius: 15,
+        borderBottomLeftRadius:15,
+    },
+    text:{
+        paddingTop: "4%",
+        textAlignVertical: 'center',
         textAlign: 'center',
         fontSize: 25,
-        width: "50%",
+        // width: "50%",
         fontWeight: 'bold',
-        borderTopLeftRadius: 15,
-        borderBottomLeftRadius:15
-
+        // borderTopLeftRadius: 15,
+        // borderBottomLeftRadius:15
     },
     delivery:{
         // marginLeft: "17%",

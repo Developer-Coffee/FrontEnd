@@ -30,9 +30,6 @@ const Login = ({setAppUser}) => {
         if(response.data.success === true){
           setAppUser(true);
         }
-        // let temp = response.data.success;
-        // setSuccess(temp);
-        // console.log(response.data.success);
       })
       return tokens;
 

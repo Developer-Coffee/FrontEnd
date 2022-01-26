@@ -1,14 +1,38 @@
 import React, { useEffect, useState, useCallback, useRef} from 'react';
-import { StyleSheet, FlatList, Text, View, Image } from 'react-native';
+import { StyleSheet, FlatList, Text, View, Image, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import {useNavigation} from '@react-navigation/native';
 import MainListItem from './MainListItem';
 import PinView from "react-native-pin-view";
+import Icon from "react-native-vector-icons/AntDesign"
 
 
 
 const Payment = () =>{
-    const ref = useRef(null);
+    const navigation = useNavigation();
+
+    const ref = useRef(null)
+    // const [showRemoveButton, setShowRemoveButton] = useState(false)
+    const [enteredPin, setEnteredPin] = useState("")
+    const [showCompletedButton, setShowCompletedButton] = useState(false)
+    useEffect(() => {
+        // if (enteredPin.length > 0) {
+        //   setShowRemoveButton(true)
+        // } else {
+        //   setShowRemoveButton(false)
+        // }
+        if (enteredPin.length === 4) {
+          setShowCompletedButton(true)
+        } else {
+          setShowCompletedButton(false)
+        }
+      }, [enteredPin])
+
+      const onpress = useCallback(()=>{
+        navigation.navigate('OrderEndScreen', {pin: enteredPin});
+        console.log(enteredPin);
+    }, [navigation, enteredPin]);
+    
     return(
         <View style = {styles.main}>
             <PinView
@@ -20,6 +44,7 @@ const Payment = () =>{
                 buttonBgColor="#ffffff"
                 buttonTextColor="black"
                 ref = {ref}
+                onValueChange={value => setEnteredPin(value)}
                 inputViewStyle={{
                     marginBottom: "18%",
                     marginTop: "15%"
@@ -37,6 +62,7 @@ const Payment = () =>{
                     fontSize: 40,
                     color: "#fff"
                 }}
+                customRightButton={showCompletedButton ? <Icon.Button name={"login"} size={32} backgroundColor = {"#474646"} color={"#FFF"} onPress = {onpress}/> : undefined}
                 
             />
         </View>

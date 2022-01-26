@@ -12,17 +12,20 @@ import _ from 'lodash';
 import MainList from '../../components/main/MainList';
 import AddButton from '../../components/main/AddButton';
 import Search from '../../components/main/search';
+import axios from 'axios';
 
 const MainScreen = ({navigation}) => {
     const route = useRoute();
     const [searchText, setSearchText] = useState('');
     const[show, setShow] = useState(false);
 
+    
+
     return (
         <View style={{marginTop:20}}>
-            <Search></Search>
+            <Search/>
             <MainList search={searchText}/>
-            <AddButton></AddButton>
+            <AddButton/>
         </View>
     );
 }

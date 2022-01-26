@@ -41,8 +41,8 @@ const AddButton = ({}) => {
             </View>  
     )*/
     return(
-        <View style={{justifyContent:'center', alignItems:'flex-end', marginRight:20}}>
-    
+        // <View style={{justifyContent:'center', alignItems:'flex-end', marginRight:20, position: 'absolute',}}>
+        <View style={{position:'absolute',bottom:20, alignSelf:'flex-end', flexDirection:'row-reverse', width:'100%', padding: "5%"}}>
             <Pressable onPress={onPress} style={styles.writeButton}> 
                 <Text style={styles.text}>+</Text>
             </Pressable>         

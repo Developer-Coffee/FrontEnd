@@ -13,7 +13,7 @@ const OrderButton = ({}) => {
     const navigation = useNavigation();
 
     const onPress = useCallback(() => {
-        navigation.navigate('MenuChoiceScreen', {navigation});
+        navigation.navigate('MeunChoiceScreen', {navigation});
     }, [navigation]);
     // , {position: 'absolute', left: 12, right: 12, bottom: 10}
  

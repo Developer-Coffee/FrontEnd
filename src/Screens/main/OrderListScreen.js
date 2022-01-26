@@ -4,18 +4,18 @@ import OrderList from '../../components/order/OrderList';
 import TabHeader from '../../components/TabHeader';
 import OrderButton from '../../components/order/OrderButton';
 
-const OrderListScreen =({navigation})=>{
-
+const OrderListScreen =({route, navigation})=>{
+    let boardId = route.params.item._id
     const onpress = useCallback(() => {
         navigation.navigate('MenuChoiceScreen', {navigation});
     }, [navigation]);
 
     return(
-        <View>
+        <View style = {{flexDirection:'column', height:'100%'}}>
             <TabHeader title = "N1 투썸플레이스"/>
-            <OrderList/>
+            <OrderList boardId = {boardId}/>
 
-            <View style={{position:'absolute',bottom:20, alignSelf:'flex-end', width:'100%'}}>
+            <View style={{position:'absolute',bottom:"5%", alignSelf:'flex-end', width:'100%'}}>
                 <Pressable onPress={onpress}>
                     <View style={styles.nextButton}>
                         <Text style={{fontFamily:'GodoM', alignSelf:'center'}}>나도 주문하기</Text>
@@ -38,8 +38,9 @@ const styles = StyleSheet.create({
         borderWidth:2,
     },
     nextButton:{
+        // marginTop: "95%",
         width:'80%',
-        height:40,
+        height: 40,
         alignSelf:'center',
         justifyContent:'center',
         borderRadius:20,

@@ -1,39 +1,67 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import { Image, StyleSheet, View, Pressable, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import cafeimg from '../../assets/Images/twosome_kaist.jpg';
 
-const MenuListItem =()=>{
+const MenuListItem =({item})=>{
+    const [selectMenu, setSelectMenu] = useState([]);
 
     const onPress = useCallback(()=>{
     }, []);
 
+    console.log("------------------메뉴리스트 아이템--------------------");
+    console.log(item[0].name, item[0].basicPrice );
+
     return(
         // main row 가로정렬
+        // <View style={styles.main}> 
+
+        //     <Pressable onPress={onPress} style={{flex:1}}>
+        //         {/* innerContainer colunm 세로정렬 */}
+        //         <View style={styles.innerContainer}>
+        //             <View style={{flexDirection:'column', backgroundColor:'#ffffff'}}>
+        //                 <Image source={cafeimg} style={{width:120, height:90}}></Image>
+        //                 <Text style={styles.smalltext}>아이스아메리카노</Text>
+        //                 <Text style={styles.smalltext}>4,500원</Text>    
+        //             </View>
+        //         </View>
+        //     </Pressable>
+
+        //     <Pressable onPress={onPress} style={{flex:1}}>
+        //         <View style={styles.innerContainer}>
+        //             <View style={{flexDirection:'column', backgroundColor:'#ffffff'}}>
+        //                 <Image source={cafeimg} style={{width:120, height:90}}></Image>
+        //                 <Text style={styles.smalltext}>아메리카노</Text>
+        //                 <Text style={styles.smalltext}>4,000원</Text>    
+        //             </View>
+        //         </View>
+        //     </Pressable>
+        // </View>
+        
         <View style={styles.main}> 
 
-            <Pressable onPress={onPress} style={{flex:1}}>
-                {/* innerContainer colunm 세로정렬 */}
-                <View style={styles.innerContainer}>
-                    <View style={{flexDirection:'column', backgroundColor:'#ffffff'}}>
-                        <Image source={cafeimg} style={{width:120, height:90}}></Image>
-                        <Text style={styles.smalltext}>아이스아메리카노</Text>
-                        <Text style={styles.smalltext}>4,500원</Text>    
-                    </View>
+        <Pressable onPress={onPress} style={{flex:1}}>
+            {/* innerContainer colunm 세로정렬 */}
+            <View style={styles.innerContainer}>
+                <View style={{flexDirection:'column', backgroundColor:'#ffffff'}}>
+                    <Image source={cafeimg} style={{width:120, height:90}}></Image>
+                    <Text style={styles.smalltext}>{item[0].name}</Text>
+                    <Text style={styles.smalltext}>{item[0].basicPrice}</Text>    
                 </View>
-            </Pressable>
+            </View>
+        </Pressable>
 
-            <Pressable onPress={onPress} style={{flex:1}}>
-                <View style={styles.innerContainer}>
-                    <View style={{flexDirection:'column', backgroundColor:'#ffffff'}}>
-                        <Image source={cafeimg} style={{width:120, height:90}}></Image>
-                        <Text style={styles.smalltext}>아메리카노</Text>
-                        <Text style={styles.smalltext}>4,000원</Text>    
-                    </View>
+        <Pressable onPress={onPress} style={{flex:1}}>
+            <View style={styles.innerContainer}>
+                <View style={{flexDirection:'column', backgroundColor:'#ffffff'}}>
+                    <Image source={cafeimg} style={{width:120, height:90}}></Image>
+                    <Text style={styles.smalltext}>{item[1].name}</Text>
+                    <Text style={styles.smalltext}>{item[1].basicPrice}</Text>    
                 </View>
-            </Pressable>
-
-        </View>
+            </View>
+        </Pressable>
+    </View>
+        
     );
 }
 export default MenuListItem;

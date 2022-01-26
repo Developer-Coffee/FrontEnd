@@ -17,7 +17,9 @@ import TabHeader from '../../components/TabHeader';
 import Payment from '../../components/main/Payment';
 
 const PaymentScreen = () => {
-
+    // const onpress = useCallback(() => {
+    //     navigation.navigate('OrderEndScreen', {navigation});
+    // }, [navigation]);
     return (
         <View>
             <TabHeader/>

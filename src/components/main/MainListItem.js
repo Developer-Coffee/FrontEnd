@@ -5,21 +5,49 @@ import { useNavigation } from '@react-navigation/native';
 const MainListItem =({item})=>{
     const navigation = useNavigation();
 
-    const onPress = useCallback((item)=>{
-        navigation.navigate('OrderListScreen', {item});
+    const onPress = useCallback(()=>{
+        navigation.navigate('OrderListScreen', {item: item});
     }, [navigation, item]);
+
+    let money = item.menuCount * 500;
+    // let boardId = item._id;
 
     return(
         <Pressable onPress={onPress}>
             <View style={styles.container}>
-
                 <View style={styles.outerColumn1, {justifyContent:'space-around', marginLeft:10}}>
-                    <Text  style={{fontSize:20, fontWeight:'500'}} >N1</Text>
-                    <Text>투썸 플레이스</Text>
+                    <Text style={{fontSize:20, fontWeight:'500'}}>{item.destination}</Text>
+                    <Text>{item.shop.address + item.shop.name}</Text>
                 </View>
 
                 <View style={styles.outerColumn2}>
 
+                    <Text style={{fontSize:24}}>{money + "원"}
+                    </Text>
+                    <View style={{flexDirection:'row', justifyContent:'center'}}>
+                        {/* <View style={styles.innerContainer}>
+                            <Text style={styles.smalltext}>인원</Text>
+                            <Text style={styles.smalltext}>6</Text>
+                        </View> */}
+                        <View style={styles.innerContainer}>
+                            <Text style={styles.smalltext}>배달현황</Text>
+                            <Text style={styles.smalltext}>{item.state}</Text>
+                        </View>
+                        <View style={styles.innerContainer}>
+                            <Text style={styles.smalltext}>주문</Text>
+                            <Text style={styles.smalltext}>{item.menuCount}</Text>
+                        </View>
+                        <View style={styles.innerContainer}>
+                            <Text style={styles.smalltext}>배달비</Text>
+                            <Text style={styles.smalltext}>500원</Text>
+                        </View>
+                    </View>
+                </View>
+                {/* <View style={styles.outerColumn1, {justifyContent:'space-around', marginLeft:10}}>
+                    <Text  style={{fontSize:20, fontWeight:'500'}} >N1</Text>
+                    <Text>투썸 플레이스</Text>
+                </View>
+                <View style={styles.outerColumn2}>
                     <Text style={{fontSize:24}}>5000원</Text>
                     <View style={{flexDirection:'row', justifyContent:'center'}}>
                         <View style={styles.innerContainer}>
@@ -35,7 +63,7 @@ const MainListItem =({item})=>{
                             <Text style={styles.smalltext}>500원</Text>
                         </View>
                     </View>
-                </View>
+                </View> */}
             </View>
         </Pressable>
     );

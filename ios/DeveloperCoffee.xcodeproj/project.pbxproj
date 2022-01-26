@@ -14,6 +14,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A4147123853333CA092CE47B /* libPods-DeveloperCoffee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57519E4D888C86F6FE5D5095 /* libPods-DeveloperCoffee.a */; };
 		B2A5227E803A11217D7E9F3D /* libPods-DeveloperCoffee-DeveloperCoffeeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAE6AFDFFEF67D7CD07B9A3 /* libPods-DeveloperCoffee-DeveloperCoffeeTests.a */; };
+		2E39A6FBE6B342AF87D3F2E3 /* GodoM.otf in Resources */ = {isa = PBXBuildFile; fileRef = C73787246C6247EE8A97BB7C /* GodoM.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		84D50E3882F40F8F4B6C3159 /* Pods-DeveloperCoffee-DeveloperCoffeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeveloperCoffee-DeveloperCoffeeTests.debug.xcconfig"; path = "Target Support Files/Pods-DeveloperCoffee-DeveloperCoffeeTests/Pods-DeveloperCoffee-DeveloperCoffeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94E8FA84FCB3D7147545C2A0 /* Pods-DeveloperCoffee-DeveloperCoffeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeveloperCoffee-DeveloperCoffeeTests.release.xcconfig"; path = "Target Support Files/Pods-DeveloperCoffee-DeveloperCoffeeTests/Pods-DeveloperCoffee-DeveloperCoffeeTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C73787246C6247EE8A97BB7C /* GodoM.otf */ = {isa = PBXFileReference; name = "GodoM.otf"; path = "../src/assets/fonts/GodoM.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				57E75B81BC10D5193B9CB44B /* Pods */,
+				1485FAC40D0545B88BDFCBF1 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +151,15 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		1485FAC40D0545B88BDFCBF1 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				C73787246C6247EE8A97BB7C /* GodoM.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +257,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2E39A6FBE6B342AF87D3F2E3 /* GodoM.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

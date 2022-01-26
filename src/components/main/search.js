@@ -3,7 +3,7 @@ import {View, TextInput, StyleSheet} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const Input = ({inputValue, inputChange}) => {
+const Search = () => {
     const insets = useSafeAreaInsets();
     return (
         <>
@@ -13,8 +13,10 @@ const Input = ({inputValue, inputChange}) => {
             style={styles.input}
             placeholder="검색"
             placeholderTextColor="#ABABAB"
-            value={inputValue}
-            onChangeText={inputChange}
+            // value={searchText}
+            // onChangeText={(text) => 
+            //     setSearchText(text)    
+            // }
             />
         </View>
         </>
@@ -46,4 +48,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Input;
+export default Search;
