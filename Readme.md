@@ -9,7 +9,6 @@
 
 Dev.Coffee는 바로 이런 아이디어에서 출발한 공동 커피 구매 플랫폼이다.
 
-# FrontEnd# Front End
 
 ## Overview
 
