@@ -41,4 +41,21 @@ const createBoard = async () => {
     };
 ```
 
+### 사용법
+
+먼저 아래처럼 카카오 로그인을 통해 로그인을 한다.
+![Screenshot_1643198526](./readmeSrc/Screenshot_1643198526.png)
+
+그러면 같이 배달을 주문할 추가적인 사람을 모집하는 방들이 존재한다.
+![Screenshot_1643198628](./readmeSrc/Screenshot_1643198528.png)
+
+여러 방 중 하나를 선택하면 기존 구성원들이 주문한 메뉴와 주문 개수가 나타난다.
+![Screenshot_1643198638](./readmeSrc/Screenshot_1643198538.png)
+
+주문하기를 누르면 아래처럼 카페에서 주문할 수 있는 메뉴들의 목록을 보여준다.
+![Screenshot_1643198638](./readmeSrc/Screenshot_1643198545.png)
+
+메뉴를 선택하고 주문을 한 뒤 결제를 하면 아래처럼 배달 예상 소요시간과 받을 수 있는 배달비가 나타난다.
+![Screenshot_1643198638](./readmeSrc/Screenshot_1643198582.png)
+
 
