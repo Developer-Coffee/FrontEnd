@@ -9,10 +9,10 @@
 import React, {useState, useCallback} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import screens from './src/screens';
+import screens from './src/Screens';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
-import Login from "./src/screens/login";
+import Login from "./src/Screens/login";
 
 const {
   MainScreen,
@@ -57,7 +57,7 @@ const App = () => {
             ))}
         </Stack.Navigator>
       </NavigationContainer>
-    </SafeAreaProvider> 
+    </SafeAreaProvider>
   );
 };
 
